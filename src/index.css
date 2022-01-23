@@ -1,0 +1,33 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.gradient-background {
+    /*background: linear-gradient(311deg,deepskyblue,darkviolet,blue);*/
+    background: linear-gradient(310deg,theme('colors.rose.200'),theme('colors.amber.50'),theme('colors.blue.200'));
+    background-size: 180% 180%;
+    animation: gradient-animation 15s ease infinite;
+    @apply bg-opacity-10;
+}
+
+@keyframes gradient-animation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.hg-theme-default {
+    background-color: transparent!important;
+    @apply backdrop-blur-sm bg-white/30 !important;
+}
+
+html {
+    background: url('https://cdn.discordapp.com/attachments/811926554422542339/934843398832136232/pexels-catia-matos-1072179.jpg') black;
+    background-size: cover;
+}
